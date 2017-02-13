@@ -1,0 +1,9 @@
+[Unit]
+Description=Jenkins Continuous Integration and Delivery server: %I
+
+[Service]
+# SystemDocker configuration
+Environment='DOCKER_IMAGE=jenkins'
+
+# Setup the volumes
+Environment='DOCKER_VOLUME_VAR_JENKINS_HOME=/srv/docker/jenkins/instance/%i/home:/var/jenkins_home'
